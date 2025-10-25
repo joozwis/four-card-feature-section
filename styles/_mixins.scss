@@ -1,0 +1,46 @@
+@use "variables" as v;
+
+@mixin text-preset-1($font-size) {
+  font-weight: v.$fw-semibold;
+  font-size: $font-size;
+  line-height: 140%;
+  letter-spacing: 0.25px;
+}
+
+@mixin text-preset-2($font-size) {
+  font-weight: v.$fw-extra-light;
+  font-size: $font-size;
+  line-height: 140%;
+  letter-spacing: 0.25px;
+}
+
+@mixin text-preset-3($font-size) {
+  font-weight: v.$fw-semibold;
+  font-size: $font-size;
+  line-height: 135%;
+  letter-spacing: 0px;
+}
+
+@mixin text-preset-4($font-size) {
+  font-size: $font-size;
+  line-height: 140%;
+  letter-spacing: 0px;
+}
+
+@mixin text-preset-5($font-size) {
+  font-size: $font-size;
+  line-height: 160%;
+  letter-spacing: 0px;
+}
+
+@mixin tablet {
+  @media (min-width: v.$bp-tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: v.$bp-desktop) {
+    @content;
+  }
+}
